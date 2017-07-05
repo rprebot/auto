@@ -4,7 +4,7 @@ from sklearn.preprocessing import scale
 
 def targeted():
 
-	auto = pd.read_csv("data/Auto1-DS-TestData.csv")
+	auto = pd.read_csv("Auto1-DS-TestData.csv")
 	# Cleaning data
 	auto = auto[auto['normalized-losses'] != '?']
 	auto = auto[auto['price'] != '?']
