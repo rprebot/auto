@@ -52,10 +52,15 @@ for _columns in auto_category.columns:
 
 
 
-# With num-of-doors
+# With aspiration
 auto_numeric = ea.auto_numeric()
-auto_numeric['num-of-doors'] = auto_category['num-of-doors']
+auto_numeric['aspiration'] = auto_category['aspiration']
+auto_numeric['body-style'] = auto_category['body-style']
+auto_numeric['engine-location'] = auto_category['engine-location']
+
 auto_numeric = pd.get_dummies(auto_numeric)
 svm_rbf = ml.cross_val_SVM_RBF(
 	auto_numeric, risk)
 print(svm_rbf['report'])
+
+
